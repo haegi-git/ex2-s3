@@ -24,4 +24,4 @@ jobs:
       - name: S3 정적웹사이트로 배포
         run: |
           # aws s3 sync 명령어로 파일 업로드
-          # aws s3 sync html/ s3://${{secrets.S3_BUCKET_NAME}}/ --delete --acl public-read
+          aws s3 sync html/ s3://${{secrets.S3_BUCKET_NAME}}/ --delete --acl public-read
